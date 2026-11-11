@@ -1,0 +1,104 @@
+[
+  {
+    "file": "assets/bike.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/bike.webp",
+    "bytes": 79044,
+    "sha256": "b4c58e3ed8dac277ac3402deecc8f4a3df4ef93ab1046d2706c27c7aa95cdd6f"
+  },
+  {
+    "file": "assets/car.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/car.webp",
+    "bytes": 77068,
+    "sha256": "586b099c3d65d3b9b6cffc16c9b644b419003a2398672e592be160381a983461"
+  },
+  {
+    "file": "assets/crane.gif",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/crane.gif",
+    "bytes": 320756,
+    "sha256": "18487e70df19c4448edd24992599cdee1a4838d5f1a6a59087467392f6086500"
+  },
+  {
+    "file": "assets/crane.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/crane.webp",
+    "bytes": 13944,
+    "sha256": "b3eed8a60faf1f0b00ceec3ed6ebc261647145cf0f18a2b1af1b1eddf2a1f318"
+  },
+  {
+    "file": "assets/fabric.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/fabric.webp",
+    "bytes": 79252,
+    "sha256": "9a525e1d8a1af4f6a216f79db7d2d99f2e8c18208436dbad85f244e6cbdcd2bb"
+  },
+  {
+    "file": "assets/hound.gif",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/hound.gif",
+    "bytes": 330171,
+    "sha256": "6c2f6f8a18171d3f074196df0182bd5f3a4fe7b993bd151b39ba645aef97f5f2"
+  },
+  {
+    "file": "assets/hound.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/hound.webp",
+    "bytes": 17484,
+    "sha256": "7dc7806bd40945fdea8acbe8d01e26a54ede1bfbc9f8f52c90d3983971c1e2a5"
+  },
+  {
+    "file": "assets/inter.woff2",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/inter.woff2",
+    "bytes": 48256,
+    "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+  },
+  {
+    "file": "assets/oswald.woff2",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/oswald.woff2",
+    "bytes": 28488,
+    "sha256": "bd73278ee0c50041b91b4c03d1229e35b501637f46b6409e7da2d3a758446ea5"
+  },
+  {
+    "file": "assets/tasa.woff2",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/tasa.woff2",
+    "bytes": 31324,
+    "sha256": "f1f146c134f6b3f174dcec1fd2b6212af6b61fb5172a1f5b41ab435386b547db"
+  },
+  {
+    "file": "assets/vinyl.gif",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/vinyl.gif",
+    "bytes": 336779,
+    "sha256": "ebc3bb90f2bd557a8644dc2c925e13a50d219d714b496396b8425c3d1f09b664"
+  },
+  {
+    "file": "assets/vinyl.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/vinyl.webp",
+    "bytes": 19680,
+    "sha256": "2510c130228b7a709721ddf8afe87b57189de5cf2cc1c4634d54698e6032dec8"
+  },
+  {
+    "file": "assets/wine.webp",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/assets/wine.webp",
+    "bytes": 64090,
+    "sha256": "7e4cdee4163a23ca8f542de006d9cd7ab97861aaea3da49f84a359cad4fb82d7"
+  },
+  {
+    "file": "licenses/Inter.txt",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/licenses/Inter.txt",
+    "bytes": 4477,
+    "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+  },
+  {
+    "file": "licenses/Oswald.txt",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/licenses/Oswald.txt",
+    "bytes": 4388,
+    "sha256": "23916cdee678823c3c517c699cb2e043088de0d46c959eeaa168b54bb84534df"
+  },
+  {
+    "file": "licenses/Tasa.txt",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/licenses/Tasa.txt",
+    "bytes": 4427,
+    "sha256": "df87441a1dc9a42f59e8fdeb6e34a3cfa0be80d956c2955273652cabaeb6b5bc"
+  },
+  {
+    "file": "free-prompt.txt",
+    "url": "https://media.prettysites.io/products/loop-dept/v1/free-prompt.txt",
+    "bytes": 22646,
+    "sha256": "08d43f5c8e2fcbc948ee7fa7d83d5e172df92c341e3b956724d26bd01504b790"
+  }
+]
