@@ -10,36 +10,42 @@
   /* ------------------------------------------------------------------------
      1. GLYPH SCRAMBLE DECODER ENGINE
      ------------------------------------------------------------------------ */
-  const GLYPHS = '∑∆◊░▒▓█ΞΨΩ01/*+=-_[]{}<>';
+  const GLYPHS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ/#*+=-~:';
 
-  function scrambleText(el, finalStr, duration = 520) {
+  function scrambleText(el, finalStr, duration = 420) {
     if (!el || reducedMotion.matches) {
       if (el && finalStr) el.textContent = finalStr;
       return;
     }
     const target = finalStr || el.dataset.scramble || el.textContent;
     el.dataset.scramble = target;
+    if (el._scrambleRaf) cancelAnimationFrame(el._scrambleRaf);
     const len = target.length;
     const start = performance.now();
 
     function step(now) {
       const progress = Math.min(1, (now - start) / duration);
+      if (progress >= 1) {
+        el.textContent = target;
+        el._scrambleRaf = null;
+        return;
+      }
       const revealCount = Math.floor(progress * len);
       let out = '';
       for (let i = 0; i < len; i++) {
         const ch = target[i];
         if (ch === ' ') {
           out += ' ';
-        } else if (i < revealCount || progress >= 1) {
+        } else if (i < revealCount) {
           out += ch;
         } else {
           out += GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
         }
       }
       el.textContent = out;
-      if (progress < 1) requestAnimationFrame(step);
+      el._scrambleRaf = requestAnimationFrame(step);
     }
-    requestAnimationFrame(step);
+    el._scrambleRaf = requestAnimationFrame(step);
   }
 
   // Trigger scramble on hover/focus and viewport entry

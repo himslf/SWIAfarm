@@ -1374,9 +1374,13 @@ input[type="range"]::-webkit-slider-thumb {
    05 // FOOTER & MODALS
    ========================================================================== */
 
-.site-footer {
-  padding: clamp(64px, 10vw, 120px) 0 calc(36px + env(safe-area-inset-bottom, 0px));
-  background: radial-gradient(circle at 50% 100%, rgba(123, 44, 191, 0.2), transparent 65%);
+.site-footer.minimal-footer {
+  padding: 28px 0 calc(28px + env(safe-area-inset-bottom, 0px));
+  background: rgba(5, 5, 8, 0.9);
+}
+
+.site-footer.minimal-footer .footer-bottom {
+  padding-top: 0;
 }
 
 .footer-cta-box {
