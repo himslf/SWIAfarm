@@ -1,22 +1,592 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050508"><meta name="description" content="swia. so what, it's art. we make things that aren't really for sale."><title>swia — so what, it's art.</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%234cc9f0'/%3E%3Cpath d='M15 9h12v37h23v10H15z'/%3E%3C/svg%3E"><link rel="preload" as="font" type="font/woff2" href="assets/oswald.woff2" crossorigin><link rel="stylesheet" href="style.css"><script defer src="script.js"></script></head>
-<body><a class="skip" href="#main">Skip to content</a>
-<header><div class="wrap nav"><a class="brand" href="#home" aria-label="swia home">swia</a><button class="menu" aria-expanded="false" aria-controls="links">Menu</button><nav id="links" aria-label="Main navigation"><a href="#home">home</a><a href="#manifesto">manifesto</a><a href="#collection">collection</a><a href="#void">the void</a><a href="#complain">complain</a></nav></div></header>
-<main id="main"><section class="hero" id="home" aria-labelledby="word"><div class="wrap hero-inner">
-<div class="top"><h1 id="word">swia</h1><div class="rails"><div>meaningless aesthetics<br>art you cannot buy<br>existential dread<br>digital void</div><div>locations<br>the cloud<br>your screen<br>nowhere</div><div class="social"><a href="#manifesto" class="pill">feel something ↗</a><a href="#collection" class="pill alt">laugh maybe ●</a></div></div></div>
-<div class="stage" aria-hidden="true"><div class="intro-card"><img src="assets/crane.webp" alt=""><span>01 / folded paper</span></div></div><div class="trail" aria-hidden="true"></div>
-<div class="experiment"><button id="play" type="button" aria-label="Play a GIF trail"><i aria-hidden="true"></i><span>play the trail</span></button><span class="hint">or wander aimlessly with your cursor</span></div>
-<div class="hero-foot"><h2>we make things that aren't really for sale.</h2><div><p>mostly to make you think, or at least exhale slightly out of your nose. it's art. so what.</p><div class="actions"><a class="pill" href="#complain">complain loudly <span>↗</span></a><a class="pill alt" href="#void">why though <span>●</span></a></div></div></div>
-</div></section>
-<section id="manifesto" class="wrap section"><div class="kicker">01 / manifesto</div><h2 class="display">art is entirely subjective. and so is our pricing.</h2><div class="partners"><strong>who we are</strong><span>cynics</span><span>dreamers</span><span>people with internet access</span></div></section>
-<section id="collection" class="works"><div class="wrap section"><div class="kicker">02 / collection</div><h2 class="display">not-really-for-sale<br>products</h2><div class="workgrid">
-<article><img src="assets/wine.webp" alt="A crystal coupe and red grapes against a cherry backdrop" loading="lazy"><div><h3>fermented grapes</h3><span>( liquid ego )</span></div><details><summary>read the plaque</summary><p>a still-life study in pretending to understand tannins. it tastes like red.</p></details></article>
-<article><img src="assets/car.webp" alt="A lone sports car at a petrol station after dusk" loading="lazy"><div><h3>depreciation asset</h3><span>( status symbol )</span></div><details><summary>read the plaque</summary><p>a machine built to sit in traffic, but significantly faster than the one next to it.</p></details></article>
-<article><img src="assets/bike.webp" alt="A cyclist in a chrome visor cuts through a blue field" loading="lazy"><div><h3>manual transit</h3><span>( effort )</span></div><details><summary>read the plaque</summary><p>pedaling towards an inevitable existential crisis while looking extremely aerodynamic.</p></details></article>
-<article><img src="assets/fabric.webp" alt="Sculptural saffron and red fabric on a dark stage" loading="lazy"><div><h3>expensive threads</h3><span>( woven )</span></div><details><summary>read the plaque</summary><p>a piece of cloth that probably costs more than your monthly rent.</p></details></article></div></div></section>
-<section id="void" class="dark"><div class="wrap section"><div class="kicker">03 / the void</div><h2 class="display">why are we here</h2><div class="service-list">
-<details open><summary>pixels</summary><p>arranged nicely on a screen. ultimately, they mean nothing.</p></details><details><summary>branding</summary><p>giving a completely fictional entity a very real superiority complex.</p></details><details><summary>art direction</summary><p>pointing at things vaguely and saying "can we make it a bit more moody?"</p></details><details><summary>web development</summary><p>responsive boxes that politely stack on top of each other when you use your phone.</p></details></div></div></section>
-<section class="wrap section"><div class="kicker">04 / testimonials</div><blockquote>“i don't get it, but i respect the audacity.”<cite>some guy on the internet · <small>probably true</small></cite></blockquote></section></main>
-<footer id="complain"><div class="wrap section"><div class="kicker">05 / complain</div><h2 class="display">want to buy something?</h2><p>too bad. but you can pretend to start a brief if it makes you feel productive.</p><button id="brief" class="pill">start a fake brief <span>↗</span></button><div class="end"><b class="brand">swia</b><a href="free-prompt.txt" download>download the aesthetic ↓</a><a href="#home">back to the top ↑</a></div></div></footer>
-<dialog id="briefbox"><form method="dialog"><button class="close" aria-label="Close brief">×</button></form><h2>fake project brief</h2><p>type your deepest desires. we won't read them.</p><label for="notes">what do you want?</label><textarea id="notes" rows="6" placeholder="demand art, seek validation..."></textarea><button class="pill" id="save">download into the void ↓</button></dialog>
-</body></html>
+<html lang="en" data-theme="void">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050508" />
+  <meta name="description" content="SWIA — So What, It's Art. Avant-garde digital foundry &amp; kinetic specimen archive." />
+  <title>SWIA — So What, It's Art.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23050508'/%3E%3Crect x='2' y='2' width='60' height='60' rx='10' fill='none' stroke='%23ccff00' stroke-width='2'/%3E%3Cpath d='M16 18h32v6H24v6h24v16H16v-6h24v-4H16z' fill='%23f5f5f7'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Interactive Background Spatial Field -->
+  <canvas id="kinetic-canvas" aria-hidden="true"></canvas>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="scroll-progress-bar" aria-hidden="true"><div id="scroll-progress-fill"></div></div>
+
+  <!-- Custom Desktop Reticle -->
+  <div id="cursor-reticle" aria-hidden="true">
+    <span class="reticle-ring"></span>
+    <span class="reticle-dot"></span>
+    <span class="reticle-label" id="reticle-label">SWIA//OS</span>
+  </div>
+
+  <!-- Top Telemetry Navigation -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="#hero" class="brand" aria-label="SWIA Home">
+        <span class="brand-mark" data-scramble="SWIA">SWIA</span>
+        <span class="brand-sub">SO WHAT, IT'S ART</span>
+      </a>
+
+      <div class="telemetry-pill" aria-hidden="true">
+        <span class="pulse-dot"></span>
+        <span id="vel-readout">VEL // 0000 PX/S</span>
+        <span class="sep">·</span>
+        <span id="scroll-pct">00%</span>
+      </div>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="#manifesto" data-scramble="01 // MANIFESTO">01 // MANIFESTO</a>
+        <a href="#vault" data-scramble="02 // SPECIMENS">02 // SPECIMENS</a>
+        <a href="#synth" data-scramble="03 // KINETIC LAB">03 // KINETIC LAB</a>
+        <a href="#void" data-scramble="04 // THE VOID">04 // THE VOID</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" id="theme-toggle" class="hud-btn" aria-label="Switch visual frequency">
+          <span class="hud-btn-dot"></span>
+          <span id="mode-label">MODE: ACID</span>
+        </button>
+        <button type="button" id="menu-toggle" class="menu-btn" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Toggle Menu">
+          <span class="menu-bars"></span>
+          <span class="menu-text">INDEX</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Screen Mobile Navigation Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" hidden>
+    <div class="mobile-drawer-inner">
+      <div class="drawer-kicker">NAVIGATION MATRIX // SWIA.HIMSLF.COM</div>
+      <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+        <a href="#hero" class="mobile-link"><small>00</small><span>MONOLITH</span></a>
+        <a href="#manifesto" class="mobile-link"><small>01</small><span>MANIFESTO</span></a>
+        <a href="#vault" class="mobile-link"><small>02</small><span>SPECIMENS</span></a>
+        <a href="#synth" class="mobile-link"><small>03</small><span>KINETIC LAB</span></a>
+        <a href="#void" class="mobile-link"><small>04</small><span>THE VOID</span></a>
+      </nav>
+      <div class="drawer-footer">
+        <p>PRE-COMMERCIAL DIGITAL FOUNDRY // ALL RIGHTS QUESTIONABLE</p>
+        <button type="button" class="pill-cta full-width" data-open-brief>TRANSMIT INTO THE VOID ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- 00 // HERO: THE KINETIC MONOLITH -->
+    <section id="hero" class="hero-section" data-section="00 // MONOLITH">
+      <div class="shell hero-grid">
+        <div class="hero-meta-row">
+          <div class="meta-block">
+            <span class="meta-label">SYS.STATE</span>
+            <strong class="meta-val" data-scramble="PRE-DROP // AUTONOMOUS">PRE-DROP // AUTONOMOUS</strong>
+          </div>
+          <div class="meta-block">
+            <span class="meta-label">COORDINATES</span>
+            <strong class="meta-val" id="coord-readout">37.7749° N // THE CLOUD</strong>
+          </div>
+          <div class="meta-block hide-sm">
+            <span class="meta-label">INVENTORY</span>
+            <strong class="meta-val">00 FOR SALE // ∞ IN MOTION</strong>
+          </div>
+        </div>
+
+        <!-- Giant Interactive Kinetic Display -->
+        <div class="monolith-stage" id="monolith-stage">
+          <div class="eyebrow-tag">
+            <span class="bracket">[</span>
+            <span>INTERACTIVE KINETIC TYPE — MOVE OR DRAG ACROSS LETTERS</span>
+            <span class="bracket">]</span>
+          </div>
+
+          <h1 class="monolith-title" aria-label="SWIA — So What, It's Art.">
+            <span class="monolith-word velocity-reactive" id="hero-swia">
+              <span class="k-char" data-char="S">S</span><span class="k-char" data-char="W">W</span><span class="k-char" data-char="I">I</span><span class="k-char" data-char="A">A</span><span class="k-char accent-period" data-char=".">.</span>
+            </span>
+            <span class="monolith-sub velocity-reactive">
+              <span class="serif-italic">so what,</span>
+              <span class="stroke-word" data-scramble="IT'S ART.">IT'S ART.</span>
+            </span>
+          </h1>
+        </div>
+
+        <div class="hero-bottom-grid">
+          <div class="hero-statement">
+            <p class="lead-copy">
+              We engineer things that aren’t really for sale—yet. Objects, frequencies, and digital specimens built to make you feel something or exhale slightly out of your nose.
+            </p>
+          </div>
+          <div class="hero-cta-cluster">
+            <a href="#vault" class="pill-cta primary" data-magnetic>
+              <span>EXPLORE SPECIMENS</span>
+              <span class="arrow">↘</span>
+            </a>
+            <button type="button" class="pill-cta ghost" data-open-brief data-magnetic>
+              <span>DEMAND ART</span>
+              <span class="dot">●</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dual Velocity-Driven Kinetic Ticker -->
+      <div class="ticker-band" aria-hidden="true">
+        <div class="ticker-track" data-ticker-dir="1">
+          <div class="ticker-content">
+            <span>SO WHAT, IT'S ART</span><span class="star">✦</span>
+            <span class="outline">MEANINGLESS AESTHETICS</span><span class="star">✦</span>
+            <span>ART YOU CANNOT BUY</span><span class="star">✦</span>
+            <span class="outline">EXISTENTIAL VELOCITY</span><span class="star">✦</span>
+            <span>PRE-COMMERCIAL FOUNDRY</span><span class="star">✦</span>
+            <span class="outline">DIGITAL SPECIMENS</span><span class="star">✦</span>
+            <span>SO WHAT, IT'S ART</span><span class="star">✦</span>
+            <span class="outline">MEANINGLESS AESTHETICS</span><span class="star">✦</span>
+            <span>ART YOU CANNOT BUY</span><span class="star">✦</span>
+            <span class="outline">EXISTENTIAL VELOCITY</span><span class="star">✦</span>
+          </div>
+        </div>
+        <div class="ticker-track reverse" data-ticker-dir="-1">
+          <div class="ticker-content">
+            <span class="mono-tag">001 // LIQUID EGO</span><span class="star">///</span>
+            <span class="mono-tag">002 // DEPRECIATION ASSET</span><span class="star">///</span>
+            <span class="mono-tag">003 // KINETIC MASS</span><span class="star">///</span>
+            <span class="mono-tag">004 // EXPENSIVE THREADS</span><span class="star">///</span>
+            <span class="mono-tag">005 // PURE AUDACITY</span><span class="star">///</span>
+            <span class="mono-tag">001 // LIQUID EGO</span><span class="star">///</span>
+            <span class="mono-tag">002 // DEPRECIATION ASSET</span><span class="star">///</span>
+            <span class="mono-tag">003 // KINETIC MASS</span><span class="star">///</span>
+            <span class="mono-tag">004 // EXPENSIVE THREADS</span><span class="star">///</span>
+            <span class="mono-tag">005 // PURE AUDACITY</span><span class="star">///</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 // THE MANIFESTO: SCROLL-SCRUBBED ILLUMINATION -->
+    <section id="manifesto" class="section manifesto-section" data-section="01 // MANIFESTO">
+      <div class="shell">
+        <div class="section-header">
+          <span class="section-index">01 // MANIFESTO</span>
+          <span class="section-rule"></span>
+          <span class="section-status">SCROLL TO ILLUMINATE</span>
+        </div>
+
+        <div class="manifesto-reader" id="manifesto-reader">
+          <p class="scrub-paragraph velocity-reactive">
+            <span class="scrub-word">Art</span>
+            <span class="scrub-word">is</span>
+            <span class="scrub-word">entirely</span>
+            <span class="scrub-word highlight-serif">subjective.</span>
+            <span class="scrub-word">And</span>
+            <span class="scrub-word">so</span>
+            <span class="scrub-word">is</span>
+            <span class="scrub-word">our</span>
+            <span class="scrub-word highlight-accent">existence.</span>
+            <span class="scrub-word">While</span>
+            <span class="scrub-word">everyone</span>
+            <span class="scrub-word">else</span>
+            <span class="scrub-word">optimizes</span>
+            <span class="scrub-word">funnels,</span>
+            <span class="scrub-word">we</span>
+            <span class="scrub-word">architect</span>
+            <span class="scrub-word highlight-serif">controlled</span>
+            <span class="scrub-word highlight-serif">chaos—</span>
+            <span class="scrub-word">digital</span>
+            <span class="scrub-word">monuments,</span>
+            <span class="scrub-word">future</span>
+            <span class="scrub-word">artifacts,</span>
+            <span class="scrub-word">and</span>
+            <span class="scrub-word">unapologetic</span>
+            <span class="scrub-word highlight-accent">experiments.</span>
+          </p>
+        </div>
+
+        <!-- Interactive Axiom Matrix -->
+        <div class="axiom-grid">
+          <article class="axiom-card" tabindex="0">
+            <div class="axiom-top">
+              <span class="axiom-num">AXIOM // 01</span>
+              <span class="axiom-badge">CYNICS</span>
+            </div>
+            <h3 data-scramble="ZERO FALSE URGENCY">ZERO FALSE URGENCY</h3>
+            <p>No countdown timers. No fake scarcity. When we drop something, it exists because it demanded to exist.</p>
+          </article>
+
+          <article class="axiom-card" tabindex="0">
+            <div class="axiom-top">
+              <span class="axiom-num">AXIOM // 02</span>
+              <span class="axiom-badge">DREAMERS</span>
+            </div>
+            <h3 data-scramble="FORM IS THE FUNCTION">FORM IS THE FUNCTION</h3>
+            <p>If a motion, shader, or typographic shift makes you stop scrolling for three seconds, it already worked.</p>
+          </article>
+
+          <article class="axiom-card" tabindex="0">
+            <div class="axiom-top">
+              <span class="axiom-num">AXIOM // 03</span>
+              <span class="axiom-badge">OPERATORS</span>
+            </div>
+            <h3 data-scramble="UNRELEASED BY DESIGN">UNRELEASED BY DESIGN</h3>
+            <p>Consider this space a living incubation chamber. Products will materialize when the calibration is complete.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 // SPECIMEN VAULT: 3D HOLOGRAPHIC / KINETIC CARDS -->
+    <section id="vault" class="section vault-section" data-section="02 // SPECIMENS">
+      <div class="shell">
+        <div class="section-header">
+          <span class="section-index">02 // SPECIMEN ARCHIVE</span>
+          <span class="section-rule"></span>
+          <span class="section-status">PRE-RELEASE // 04 OBJECTS</span>
+        </div>
+
+        <div class="vault-intro">
+          <h2 class="section-title velocity-reactive">
+            NOT-REALLY-FOR-SALE <span class="serif-italic">artifacts.</span>
+          </h2>
+          <p class="vault-sub">
+            Tap or hover any specimen to inspect its live kinetic signature and plaque notes.
+          </p>
+        </div>
+
+        <div class="specimen-grid">
+          <!-- Specimen 01 -->
+          <article class="specimen-card" data-tilt data-specimen="01">
+            <div class="specimen-glare" aria-hidden="true"></div>
+            <div class="specimen-header">
+              <span class="spec-id">SPEC // 001</span>
+              <span class="spec-status">LIQUID EGO</span>
+            </div>
+            <div class="specimen-visual" aria-hidden="true">
+              <svg viewBox="0 0 400 280" class="gen-svg">
+                <defs>
+                  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="var(--accent)" />
+                    <stop offset="100%" stop-color="var(--accent-2)" />
+                  </linearGradient>
+                </defs>
+                <circle cx="200" cy="140" r="92" fill="none" stroke="url(#g1)" stroke-width="1.5" stroke-dasharray="6 6" class="spin-slow" />
+                <circle cx="200" cy="140" r="64" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1" class="spin-rev" />
+                <path d="M108 140 Q200 40 292 140 Q200 240 108 140 Z" fill="none" stroke="url(#g1)" stroke-width="2" class="morph-path" />
+                <circle cx="200" cy="140" r="16" fill="var(--accent)" class="pulse-core" />
+              </svg>
+              <div class="visual-overlay-code">FREQ: 432.09 HZ // TANNIN MATRIX</div>
+            </div>
+            <div class="specimen-body">
+              <div class="spec-title-row">
+                <h3 data-scramble="FERMENTED GRAPES">FERMENTED GRAPES</h3>
+                <span class="spec-price">[ UNPRICED ]</span>
+              </div>
+              <p class="spec-desc">A still-life study in pretending to understand vintage notes and molecular sommelier theater. It tastes like red.</p>
+              <button type="button" class="spec-trigger" data-inspect="01">
+                <span>INSPECT PLAQUE</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Specimen 02 -->
+          <article class="specimen-card" data-tilt data-specimen="02">
+            <div class="specimen-glare" aria-hidden="true"></div>
+            <div class="specimen-header">
+              <span class="spec-id">SPEC // 002</span>
+              <span class="spec-status">STATUS SYMBOL</span>
+            </div>
+            <div class="specimen-visual" aria-hidden="true">
+              <svg viewBox="0 0 400 280" class="gen-svg">
+                <g stroke="rgba(255,255,255,0.22)" stroke-width="1" fill="none">
+                  <polygon points="200,36 330,210 70,210" class="spin-slow" />
+                  <polygon points="200,244 330,70 70,70" class="spin-rev" />
+                </g>
+                <line x1="40" y1="140" x2="360" y2="140" stroke="var(--accent)" stroke-width="2" />
+                <rect x="155" y="95" width="90" height="90" fill="none" stroke="var(--accent-2)" stroke-width="2" class="spin-slow" />
+              </svg>
+              <div class="visual-overlay-code">MACH 0.02 // IDLE IN TRAFFIC</div>
+            </div>
+            <div class="specimen-body">
+              <div class="spec-title-row">
+                <h3 data-scramble="DEPRECIATION ASSET">DEPRECIATION ASSET</h3>
+                <span class="spec-price">[ LOCKED ]</span>
+              </div>
+              <p class="spec-desc">An aerodynamic machine engineered to sit in bumper-to-bumper gridlock, but significantly louder than the one next to it.</p>
+              <button type="button" class="spec-trigger" data-inspect="02">
+                <span>INSPECT PLAQUE</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Specimen 03 -->
+          <article class="specimen-card" data-tilt data-specimen="03">
+            <div class="specimen-glare" aria-hidden="true"></div>
+            <div class="specimen-header">
+              <span class="spec-id">SPEC // 003</span>
+              <span class="spec-status">PURE EFFORT</span>
+            </div>
+            <div class="specimen-visual" aria-hidden="true">
+              <svg viewBox="0 0 400 280" class="gen-svg">
+                <path d="M 40 140 C 110 40, 170 240, 240 140 C 290 60, 330 220, 360 140" fill="none" stroke="var(--accent)" stroke-width="2.5" class="wave-path" />
+                <path d="M 40 140 C 110 240, 170 40, 240 140 C 290 220, 330 60, 360 140" fill="none" stroke="var(--accent-2)" stroke-width="1.5" stroke-dasharray="4 4" class="wave-path" />
+                <circle cx="120" cy="140" r="36" fill="none" stroke="#fff" stroke-width="1.2" />
+                <circle cx="280" cy="140" r="36" fill="none" stroke="#fff" stroke-width="1.2" />
+              </svg>
+              <div class="visual-overlay-code">CADENCE // EXISTENTIAL SPRINT</div>
+            </div>
+            <div class="specimen-body">
+              <div class="spec-title-row">
+                <h3 data-scramble="MANUAL TRANSIT">MANUAL TRANSIT</h3>
+                <span class="spec-price">[ ARCHIVED ]</span>
+              </div>
+              <p class="spec-desc">Pedaling aggressively toward an inevitable existential realization while wearing a chrome visor and carbon fiber.</p>
+              <button type="button" class="spec-trigger" data-inspect="03">
+                <span>INSPECT PLAQUE</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Specimen 04 -->
+          <article class="specimen-card" data-tilt data-specimen="04">
+            <div class="specimen-glare" aria-hidden="true"></div>
+            <div class="specimen-header">
+              <span class="spec-id">SPEC // 004</span>
+              <span class="spec-status">WOVEN MATTER</span>
+            </div>
+            <div class="specimen-visual" aria-hidden="true">
+              <svg viewBox="0 0 400 280" class="gen-svg">
+                <g stroke="var(--accent)" stroke-width="1.2" fill="none" opacity="0.85">
+                  <ellipse cx="200" cy="140" rx="130" ry="38" transform="rotate(-18 200 140)" class="spin-slow" />
+                  <ellipse cx="200" cy="140" rx="130" ry="38" transform="rotate(18 200 140)" class="spin-rev" />
+                  <ellipse cx="200" cy="140" rx="130" ry="38" transform="rotate(54 200 140)" class="spin-slow" />
+                  <ellipse cx="200" cy="140" rx="130" ry="38" transform="rotate(-54 200 140)" class="spin-rev" />
+                </g>
+              </svg>
+              <div class="visual-overlay-code">THREAD COUNT // RENT MULTIPLIER</div>
+            </div>
+            <div class="specimen-body">
+              <div class="spec-title-row">
+                <h3 data-scramble="EXPENSIVE THREADS">EXPENSIVE THREADS</h3>
+                <span class="spec-price">[ 01 OF 01 ]</span>
+              </div>
+              <p class="spec-desc">Sculptural textile geometry draped on a dark stage. A garment that costs slightly more than your monthly lease.</p>
+              <button type="button" class="spec-trigger" data-inspect="04">
+                <span>INSPECT PLAQUE</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 // THE KINETIC LAB: INTERACTIVE TYPE SYNTHESIZER -->
+    <section id="synth" class="section synth-section" data-section="03 // KINETIC LAB">
+      <div class="shell">
+        <div class="section-header">
+          <span class="section-index">03 // KINETIC SYNTHESIZER</span>
+          <span class="section-rule"></span>
+          <span class="section-status">LIVE INTERACTIVE ENGINE</span>
+        </div>
+
+        <div class="synth-box">
+          <div class="synth-top-bar">
+            <div class="synth-title-group">
+              <span class="mono-kicker">TOUCH OR SLIDE TO MUTATE THE SIGNAL</span>
+              <h2>TYPOGRAPHIC <span class="serif-italic">distorter.</span></h2>
+            </div>
+            <div class="synth-presets" role="group" aria-label="Kinetic Presets">
+              <button type="button" class="preset-btn active" data-preset="liquid">LIQUID</button>
+              <button type="button" class="preset-btn" data-preset="hyper">HYPER</button>
+              <button type="button" class="preset-btn" data-preset="brutal">BRUTAL</button>
+              <button type="button" class="preset-btn" data-preset="scramble">GLITCH</button>
+            </div>
+          </div>
+
+          <!-- Live Kinetic Stage -->
+          <div class="synth-stage" id="synth-stage" aria-live="polite">
+            <div class="synth-phrase" id="synth-phrase" data-text="SO WHAT, IT'S ART."></div>
+          </div>
+
+          <!-- Touch-Friendly Sliders -->
+          <div class="synth-controls">
+            <label class="control-cell">
+              <div class="control-label-row">
+                <span>WAVE AMPLITUDE</span>
+                <output id="amp-val">42%</output>
+              </div>
+              <input type="range" id="ctrl-amp" min="0" max="100" value="42" />
+            </label>
+
+            <label class="control-cell">
+              <div class="control-label-row">
+                <span>TEMPORAL SPEED</span>
+                <output id="freq-val">65%</output>
+              </div>
+              <input type="range" id="ctrl-freq" min="5" max="100" value="65" />
+            </label>
+
+            <label class="control-cell">
+              <div class="control-label-row">
+                <span>SHEAR / SKEW ANGLE</span>
+                <output id="skew-val">0°</output>
+              </div>
+              <input type="range" id="ctrl-skew" min="-28" max="28" value="0" />
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 // THE VOID: ACCORDION MATRIX & TESTIMONIAL -->
+    <section id="void" class="section void-section" data-section="04 // THE VOID">
+      <div class="shell">
+        <div class="section-header">
+          <span class="section-index">04 // THE VOID</span>
+          <span class="section-rule"></span>
+          <span class="section-status">CAPABILITIES &amp; AUDACITY</span>
+        </div>
+
+        <div class="void-layout">
+          <div class="void-left">
+            <h2 class="section-title velocity-reactive">
+              WHY ARE <span class="serif-italic">we here?</span>
+            </h2>
+            <blockquote class="audacity-quote">
+              <p>“I don’t get it, but I respect the audacity.”</p>
+              <cite>— SOME GUY ON THE INTERNET · <span>PROBABLY TRUE</span></cite>
+            </blockquote>
+          </div>
+
+          <div class="void-accordion">
+            <details class="kinetic-details" open>
+              <summary>
+                <span class="sum-num">01</span>
+                <span class="sum-title" data-scramble="PIXELS &amp; SHADERS">PIXELS &amp; SHADERS</span>
+                <span class="sum-icon">+</span>
+              </summary>
+              <div class="details-content">
+                <p>Arranged with surgical precision on glass rectangles. Ultimately, they mean nothing—which makes them free to become anything.</p>
+              </div>
+            </details>
+
+            <details class="kinetic-details">
+              <summary>
+                <span class="sum-num">02</span>
+                <span class="sum-title" data-scramble="BRAND MYTHOLOGY">BRAND MYTHOLOGY</span>
+                <span class="sum-icon">+</span>
+              </summary>
+              <div class="details-content">
+                <p>Giving an autonomous creative entity a very real superiority complex before a single SKU even hits the warehouse.</p>
+              </div>
+            </details>
+
+            <details class="kinetic-details">
+              <summary>
+                <span class="sum-num">03</span>
+                <span class="sum-title" data-scramble="ART DIRECTION">ART DIRECTION</span>
+                <span class="sum-icon">+</span>
+              </summary>
+              <div class="details-content">
+                <p>Pointing vaguely at a dark monitor at 2:00 AM and asking, “Can we make the typography feel more existential?”</p>
+              </div>
+            </details>
+
+            <details class="kinetic-details">
+              <summary>
+                <span class="sum-num">04</span>
+                <span class="sum-title" data-scramble="KINETIC ARCHITECTURE">KINETIC ARCHITECTURE</span>
+                <span class="sum-icon">+</span>
+              </summary>
+              <div class="details-content">
+                <p>Fluid spring physics and responsive geometry that perform just as hard on a thumb-scrolled phone as on a studio display.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 05 // FOOTER: TRANSMIT INTO THE VOID -->
+  <footer class="site-footer" id="complain">
+    <div class="shell">
+      <div class="footer-cta-box">
+        <div class="footer-kicker">05 // TRANSMISSION TERMINAL</div>
+        <h2 class="footer-display velocity-reactive">
+          WANT TO BUY <span class="serif-italic">something?</span>
+        </h2>
+        <p class="footer-sub">
+          Too bad—nothing is unlocked yet. But you can transmit a fake project brief into the void if it makes you feel productive.
+        </p>
+        <div class="footer-actions">
+          <button type="button" class="pill-cta primary" data-open-brief data-magnetic>
+            <span>START A FAKE BRIEF</span>
+            <span class="arrow">↗</span>
+          </button>
+          <a href="#top" class="pill-cta ghost" data-magnetic>
+            <span>RETURN TO MONOLITH</span>
+            <span class="arrow">↑</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-brand-col">
+          <span class="footer-logo">SWIA.</span>
+          <span class="footer-copy">© <span id="year">2026</span> SWIA // HIMSLF. SO WHAT, IT'S ART.</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://himslf.com" target="_blank" rel="noopener">HIMSLF.COM ↗</a>
+          <button type="button" class="text-btn" id="scramble-all-btn">SCRAMBLE REALITY ⟳</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Specimen Plaque Modal -->
+  <dialog id="specimen-dialog" class="cyber-dialog" aria-labelledby="spec-modal-title">
+    <div class="dialog-frame">
+      <div class="dialog-top">
+        <span class="mono-kicker" id="spec-modal-id">SPECIMEN // 001</span>
+        <button type="button" class="dialog-close" data-close-dialog aria-label="Close modal">✕</button>
+      </div>
+      <h2 id="spec-modal-title" class="dialog-title">FERMENTED GRAPES</h2>
+      <p id="spec-modal-body" class="dialog-desc"></p>
+      <div class="dialog-telemetry" id="spec-modal-meta"></div>
+      <div class="dialog-actions">
+        <button type="button" class="pill-cta primary" data-open-brief>REQUEST ACQUISITION ↗</button>
+        <button type="button" class="pill-cta ghost" data-close-dialog>CLOSE PLAQUE</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Fake Brief / Void Transmission Modal -->
+  <dialog id="brief-dialog" class="cyber-dialog" aria-labelledby="brief-modal-title">
+    <div class="dialog-frame">
+      <div class="dialog-top">
+        <span class="mono-kicker">VOID PROTOCOL // INPUT TERMINAL</span>
+        <button type="button" class="dialog-close" data-close-dialog aria-label="Close brief">✕</button>
+      </div>
+      <h2 id="brief-modal-title" class="dialog-title">TRANSMIT A FAKE BRIEF</h2>
+      <p class="dialog-desc">Type your deepest creative demands, product wishes, or complaints. We probably won't read them, but the void will issue an official cryptographic receipt.</p>
+      <label class="field-label" for="brief-input">TRANSMISSION PAYLOAD</label>
+      <textarea id="brief-input" rows="5" placeholder="Demand art, propose a collaboration, or yell at the void..."></textarea>
+      <div class="dialog-actions">
+        <button type="button" id="download-brief" class="pill-cta primary">DOWNLOAD VOID RECEIPT ↓</button>
+        <button type="button" class="pill-cta ghost" data-close-dialog>ABORT</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
